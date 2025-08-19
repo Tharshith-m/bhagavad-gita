@@ -8,10 +8,18 @@ from telegram.ext import Application, CommandHandler, ContextTypes
 
 from . import database, models
 from sqlalchemy.orm import Session
+from dotenv import load_dotenv
+
+load_dotenv()  
 
 # === Config ===
-BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN", "8436783725:AAFkrQhwMV0KyqgQmLwaTdO-6ou8hp3gdQ0")
-USER_ID = int(os.getenv("TELEGRAM_USER_ID", "1267124013"))
+
+BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN")
+# USER_ID = int(os.getenv("TELEGRAM_USER_ID"))
+user_id_str = os.getenv("TELEGRAM_USER_ID")
+if not user_id_str:
+    raise ValueError("❌ TELEGRAM_USER_ID is missing in .env file")
+USER_ID = int(user_id_str)
 TEST_MODE = os.getenv("TEST_MODE", "false").lower() == "true"
 
 logging.basicConfig(level=logging.INFO)
