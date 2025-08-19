@@ -1,0 +1,45 @@
+# Python cache/bytecode
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+
+# Virtual environments
+venv/
+.env/
+.venv/
+env/
+
+# IDE / Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Databases / local storage
+*.db
+*.sqlite3
+
+# Logs
+*.log
+
+# Build / packaging
+build/
+dist/
+*.egg-info/
+
+# PDF, large docs (keep only if necessary)
+*.pdf
+
+# Ignore everything inside .git itself (git manages it)
+.git/
+
+# If you ever use Docker
+*.pid
+*.seed
+*.pid.lock

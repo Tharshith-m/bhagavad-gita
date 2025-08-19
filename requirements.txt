@@ -1,0 +1,8 @@
+pdfminer.six==20221105
+fastapi==0.110.0
+uvicorn==0.27.1
+sqlalchemy==2.0.29
+pydantic==2.6.1
+python-telegram-bot==20.3
+apscheduler==3.10.1
+
